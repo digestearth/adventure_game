@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://town_screens/shop.gd" type="Script" id=1]
+
+[node name="shop" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="header" type="Label" parent="."]
+margin_left = 239.53
+margin_top = 54.4704
+margin_right = 324.53
+margin_bottom = 68.4704
+text = "Good ol Shop"
+
+[node name="money" type="Label" parent="."]
+margin_left = 252.1
+margin_top = 83.1023
+margin_right = 312.1
+margin_bottom = 97.1023
+text = "money: 0"
+
+[node name="spend_money" type="Button" parent="."]
+margin_left = 235.34
+margin_top = 116.623
+margin_right = 333.34
+margin_bottom = 136.623
+text = "Spend Money"
+[connection signal="pressed" from="spend_money" to="." method="_on_spend_money_pressed"]
