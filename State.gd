@@ -7,6 +7,8 @@ var Money = 0
 var Location = "default"
 var snapshot_array = []
 var current_snapshot = "res://town_screens/home.tscn"
+var player_entity = "res://entities/human/entity.tscn"
+var enemy_entity = "res://entities/human/entity.tscn"
 
 signal snapshot_changed(current_snapshot)
 signal money_changed(money)
@@ -52,6 +54,12 @@ func get_money():
 	
 func get_current_snapshot():
 	return current_snapshot
+	
+func get_player_entity():
+	return player_entity
+	
+func get_enemy_entity():
+	return enemy_entity
 	
 
 
