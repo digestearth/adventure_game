@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ui_control/battle_ui.gd" type="Script" id=1]
+[ext_resource path="res://ui_control/player.gd" type="Script" id=2]
+[ext_resource path="res://ui_control/enemy.gd" type="Script" id=3]
+
+[node name="battle_ui" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="player" type="Container" parent="."]
+margin_left = 37.8432
+margin_top = 49.0784
+margin_right = 269.843
+margin_bottom = 379.078
+script = ExtResource( 2 )
+
+[node name="enemy" type="Container" parent="."]
+margin_left = 413.247
+margin_top = 50.285
+margin_right = 649.247
+margin_bottom = 365.285
+script = ExtResource( 3 )

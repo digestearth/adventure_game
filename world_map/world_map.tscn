@@ -27,6 +27,14 @@ margin_top = 92.0
 margin_right = 256.0
 margin_bottom = 128.0
 text = "grocery"
+
+[node name="battle_button" type="Button" parent="."]
+margin_left = 317.0
+margin_top = 196.0
+margin_right = 371.0
+margin_bottom = 216.0
+text = "Battle"
 [connection signal="loc_changed" from="." to="Location" method="_on_world_map_loc_changed"]
 [connection signal="pressed" from="home_button" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="grocery_button" to="." method="_on_grocery_button_pressed"]
+[connection signal="pressed" from="battle_button" to="." method="_on_battle_button_pressed"]

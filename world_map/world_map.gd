@@ -27,3 +27,8 @@ func _on_grocery_button_pressed():
 
 func _on_State_location_changed(location):
 	emit_signal("loc_changed", location)
+
+
+func _on_battle_button_pressed():
+	get_tree().get_root().get_node("game").find_node("State").set_current_snapshot("res://ui_control/battle_ui.tscn")
+
