@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui_control/user_interface.gd" type="Script" id=1]
+[ext_resource path="res://shop_buttons.gd" type="Script" id=2]
+
+[node name="UI_Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="display" type="Container" parent="."]
+margin_left = 159.0
+margin_top = 19.0
+margin_right = 601.0
+margin_bottom = 350.0
+script = ExtResource( 2 )
+
+[node name="update" type="Button" parent="."]
+margin_left = 32.1236
+margin_top = 19.5535
+margin_right = 88.1236
+margin_bottom = 39.5535
+text = "update"
+
+[node name="clean" type="Button" parent="."]
+margin_left = 37.0119
+margin_top = 61.4538
+margin_right = 49.0119
+margin_bottom = 81.4538
+text = "Clean"
+
+[node name="world_map" type="Button" parent="."]
+margin_left = 20.9502
+margin_top = 100.561
+margin_right = 99.9502
+margin_bottom = 120.561
+text = "world map"
+[connection signal="pressed" from="update" to="." method="_on_update_pressed"]
+[connection signal="pressed" from="clean" to="." method="_on_clean_pressed"]
+[connection signal="pressed" from="world_map" to="." method="_on_world_map_pressed"]
