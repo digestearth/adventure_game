@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://State.gd" type="Script" id=1]
+[ext_resource path="res://ui_control/user_interface.tscn" type="PackedScene" id=2]
+
+[node name="game" type="Node2D"]
+
+[node name="State" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="UI_Control" parent="." instance=ExtResource( 2 )]
+[connection signal="snapshot_changed" from="State" to="UI_Control" method="_on_State_snapshot_changed"]
