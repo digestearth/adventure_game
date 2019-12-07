@@ -31,23 +31,23 @@ margin_bottom = 14.0
 text = "Health: 100"
 
 [node name="body" type="ReferenceRect" parent="."]
-margin_left = 99.5698
-margin_top = 136.623
-margin_right = 261.57
-margin_bottom = 278.623
+margin_left = 77.0
+margin_top = 137.0
+margin_right = 262.0
+margin_bottom = 279.0
 
 [node name="bodyRect" type="ColorRect" parent="body"]
-margin_left = 13.0
-margin_top = 11.0
-margin_right = 148.0
-margin_bottom = 111.0
+margin_left = 27.7019
+margin_top = 20.5563
+margin_right = 162.702
+margin_bottom = 120.556
 color = Color( 0, 0, 0, 1 )
 
 [node name="health" type="Label" parent="body"]
-margin_left = 41.1653
-margin_top = 117.615
-margin_right = 115.165
-margin_bottom = 131.615
+margin_left = 2.94038
+margin_top = 3.67548
+margin_right = 76.9404
+margin_bottom = 17.6755
 text = "Health: 100"
 [connection signal="gui_input" from="head/headRect" to="." method="_on_headRect_gui_input"]
 [connection signal="gui_input" from="body/bodyRect" to="." method="_on_bodyRect_gui_input"]
