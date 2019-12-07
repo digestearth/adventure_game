@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://entities/human/entity.gd" type="Script" id=1]
+
+[node name="entity" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="lifePoints" type="Label" parent="."]
+margin_left = 6.98341
+margin_top = 11.8717
+margin_right = 113.983
+margin_bottom = 25.8717
+text = "Life Points: 1000"
+
+[node name="head" type="ReferenceRect" parent="."]
+margin_left = 139.942
+margin_top = 75.9268
+margin_right = 214.942
+margin_bottom = 139.927
+
+[node name="headRect" type="ColorRect" parent="head"]
+margin_left = 13.9668
+margin_top = 16.9072
+margin_right = 53.9668
+margin_bottom = 56.9072
+color = Color( 0, 0, 0, 1 )
+
+[node name="health" type="Label" parent="head"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Health: 100"
+
+[node name="body" type="ReferenceRect" parent="."]
+margin_left = 99.5698
+margin_top = 136.623
+margin_right = 261.57
+margin_bottom = 278.623
+
+[node name="bodyRect" type="ColorRect" parent="body"]
+margin_left = 13.0
+margin_top = 11.0
+margin_right = 148.0
+margin_bottom = 111.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="health" type="Label" parent="body"]
+margin_left = 41.1653
+margin_top = 117.615
+margin_right = 115.165
+margin_bottom = 131.615
+text = "Health: 100"
+[connection signal="gui_input" from="head/headRect" to="." method="_on_headRect_gui_input"]
+[connection signal="gui_input" from="body/bodyRect" to="." method="_on_bodyRect_gui_input"]
